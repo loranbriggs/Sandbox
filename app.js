@@ -34,3 +34,19 @@ app.get('/users', user.list);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+var gith = require('gith').create(9004);
+
+gith({
+    repo: 'loranbriggs/Sandbox',
+    branch: 'develop'
+  }).on( 'all', function( payload ) {
+    var sys = require('sys')
+    var exec = require('child_process').exec;
+    function puts(error, stdout, stderr) { 
+      sys.puts(stdout)
+    }
+    exec(". ~/sandbox.codesquire.com/deploy-develop.sh", puts); // command to be execute
+  });
+
