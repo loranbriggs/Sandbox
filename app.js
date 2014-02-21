@@ -40,13 +40,13 @@ var gith = require('gith').create(9004);
 
 gith({
     repo: 'loranbriggs/Sandbox',
-    branch: 'develop'
+    branch: 'master'
   }).on( 'all', function( payload ) {
     var sys = require('sys')
     var exec = require('child_process').exec;
     function puts(error, stdout, stderr) { 
       sys.puts(stdout)
     }
-    exec(". ~/sandbox.codesquire.com/deploy-develop.sh", puts); // command to be execute
+    exec(". ~/sandbox.codesquire.com/deploy-master.sh", puts); // command to be execute
   });
 
