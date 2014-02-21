@@ -4,4 +4,4 @@ echo "Deploying develop branch at $(date)" >> ~/sandbox.codesquire.com/deploymen
 
 git pull
 
-forever restart QKpf
+forever restart 36mo
