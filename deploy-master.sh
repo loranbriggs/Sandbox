@@ -4,4 +4,4 @@ echo "Deploying master branch at $(date)" >> ~/sandbox.codesquire.com/deployment
 
 git pull
 
-forever restart 5ev7
+forever restart f0EP
